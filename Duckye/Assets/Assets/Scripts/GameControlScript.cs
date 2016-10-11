@@ -30,11 +30,12 @@ public class GameControlScript : MonoBehaviour
 	void Update()
 	{
         //if the game is over and the player has pressed some input...
-        if (isGameOver && Input.anyKey) 
+        if (isGameOver && Input.GetKeyDown(KeyCode.R)) 
 		{
 			//...start a new game.
 			Application.LoadLevel(Application.loadedLevel);		
-		}
+		} 
+
 	}
 
 	public void BirdScored()

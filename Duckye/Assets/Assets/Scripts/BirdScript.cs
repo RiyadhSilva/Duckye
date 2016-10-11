@@ -22,6 +22,10 @@ public class BirdScript : MonoBehaviour
 
 	void Update()
 	{
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.S))
+        {
+            Application.Quit();
+        }
 		//don't allow control if the bird has died
 		if (isDead)
 			return;
